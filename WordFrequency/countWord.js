@@ -122,12 +122,10 @@ document.getElementById("translate").onclick = function(){
      }else{
         processData();
         extracounts("caraccount","paragraphcount", "sentencecount");
+        document.getElementById("characters").style.visibility = "visible";
+        document.getElementById("paragraphs").style.visibility = "visible";
+        document.getElementById("sentences").style.visibility = "visible";
         d3.select("svg").remove();
         pieChat();
       }
  };
-
-
-
- 
-
