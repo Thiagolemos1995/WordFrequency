@@ -81,10 +81,10 @@ function pieChat(){
 
   var svg = d3.select('body')
     .append('svg')
-    .attr('width', width)
-    .attr('height', height)
+      .attr('width', width)
+      .attr('height', height)
     .append('g')
-    .attr('transform', 'translate(' + (width / 2) +
+      .attr('transform', 'translate(' + (width / 2) +
       ',' + (height / 2) + ')');
 
   var arc = d3.arc()
@@ -96,6 +96,7 @@ function pieChat(){
       return d.value;
     })
     .sort(null);
+          var data_ready = pie(d3.entries(data))
 
   var path = svg.selectAll('path')
     .data(pie(data))
@@ -114,6 +115,9 @@ document.getElementById("translate").onclick = function(){
         alert("Please enter the text that you want to count words!"); 
      }else{
         processData()
+        document.getElementById("caraccount").innerHTML = (document.getElementById('inputString').value.match(/\b[-?(\w+)?]+\b/gi).length);
+        document.getElementById("paragraphcount").innerHTML = (document.getElementById('inputString').value.replace(/\n$/gm, '').split(/\n/).length);
+        document.getElementById("sentencecount").innerHTML = (document.getElementById('inputString').value.split(/[.|!|?]+/g).length);
         d3.select("svg").remove();
         pieChat()
       }
