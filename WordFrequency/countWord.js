@@ -108,17 +108,26 @@ function pieChat(){
     });
 }
 
+function extracounts(divwordcount, divparcount, divsentcount) {
+  document.getElementById(divwordcount).innerHTML = (document.getElementById('inputString').value.match(/\b[-?(\w+)?]+\b/gi).length);
+  document.getElementById(divparcount).innerHTML = (document.getElementById('inputString').value.replace(/\n$/gm, '').split(/\n/).length);
+  document.getElementById(divsentcount).innerHTML = (document.getElementById('inputString').value.split(/[.|!|?]+/g).length);
+}
+
 // função para adicionar um evento ao click do botão translate, para verificar se há algum texto escrito, caso positivo, realiza o processamento acima
 document.getElementById("translate").onclick = function(){
   var textvalue = document.getElementById("inputString").value
      if(textvalue == ""){
         alert("Please enter the text that you want to count words!"); 
      }else{
-        processData()
-        document.getElementById("caraccount").innerHTML = (document.getElementById('inputString').value.match(/\b[-?(\w+)?]+\b/gi).length);
-        document.getElementById("paragraphcount").innerHTML = (document.getElementById('inputString').value.replace(/\n$/gm, '').split(/\n/).length);
-        document.getElementById("sentencecount").innerHTML = (document.getElementById('inputString').value.split(/[.|!|?]+/g).length);
+        processData();
+        extracounts("caraccount","paragraphcount", "sentencecount");
         d3.select("svg").remove();
-        pieChat()
+        pieChat();
       }
  };
+
+
+
+ 
+
