@@ -58,3 +58,14 @@ table {
   td:nth-child(3) {
     width: 100%;
   }
+
+  .pie-chart{
+    width: 15%;
+    height: 15%
+  }
+
+  svg{
+    flex: 1;
+    width: 50vw;
+    margin: 0 auto;
+  }
