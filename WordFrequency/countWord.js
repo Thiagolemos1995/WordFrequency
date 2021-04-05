@@ -67,7 +67,7 @@ const processData = () => {
 document.getElementById("translate").onclick = function(){
   var textvalue = document.getElementById("inputString").value
      if(textvalue == ""){
-       alert("Please enter with text that you want to count words!"); 
+       alert("Please enter the text that you want to count words!"); 
      }else{
       processData()
        }
