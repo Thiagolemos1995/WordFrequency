@@ -12,3 +12,7 @@ Ao fim da página também será gerado um gráfico de pizza com base nos dados g
 
 No entando o gráfico de pizza, quando processado muitos dados, não gerou um resultado satisfatório.
 Para futuras melhorias será alterado para um gráfico de bolhas (Bubble chart) utilizando a biblioteca d3 versão 4.0, e será adicionado "labels" aos dados do gráfico gerado para que seja mais facilmente interpretado pelo usuário.
+
+## 
+
+https://jsfiddle.net/thiagolemos1995/yts9L84b/6/
