@@ -69,47 +69,47 @@ const processData = () => {
      window.console.log(count);
 };
 
-function pieChat(){
-  var data = wordFreq(cleanInput(getUserInput()));
-  var data = d3.entries(data);
+ function pieChat(){
+   var data = wordFreq(cleanInput(getUserInput()));
+   var data = d3.entries(data);
 
-  var width = 360;
-  var height = 360;
-  var radius = Math.min(width, height) / 2;
+   var width = 360;
+   var height = 360;
+   var radius = Math.min(width, height) / 2;
 
-  var color = d3.scaleOrdinal(d3.schemeCategory20b);
+   var color = d3.scaleOrdinal(d3.schemeCategory20b);
 
-  var svg = d3.select('body')
-    .append('svg')
-      .attr('width', width)
-      .attr('height', height)
-    .append('g')
-      .attr('transform', 'translate(' + (width / 2) +
-      ',' + (height / 2) + ')');
+   var svg = d3.select('body')
+     .append('svg')
+       .attr('width', width)
+       .attr('height', height)
+     .append('g')
+       .attr('transform', 'translate(' + (width / 2) +
+       ',' + (height / 2) + ')');
 
-  var arc = d3.arc()
-    .innerRadius(0)
-    .outerRadius(radius);
+   var arc = d3.arc()
+     .innerRadius(0)
+     .outerRadius(radius);
 
-  var pie = d3.pie()
-    .value(function(d) {
-      return d.value;
-    })
-    .sort(null);
-          var data_ready = pie(d3.entries(data))
+   var pie = d3.pie()
+     .value(function(d) {
+       return d.value;
+     })
+     .sort(null);
+   var data_ready = pie(d3.entries(data))
 
-  var path = svg.selectAll('path')
-    .data(pie(data))
-    .enter()
-    .append('path')
-    .attr('d', arc)
-    .attr('fill', function(d, i) {
-      return color(d.data.key);
-    });
-}
+   var path = svg.selectAll('path')
+     .data(pie(data))
+     .enter()
+     .append('path')
+     .attr('d', arc)
+     .attr('fill', function(d, i) {
+       return color(d.data.key);
+     });
+ }
 
-function extracounts(divwordcount, divparcount, divsentcount) {
-  document.getElementById(divwordcount).innerHTML = (document.getElementById('inputString').value.match(/\b[-?(\w+)?]+\b/gi).length);
+function extracounts(divcaraccount, divparcount, divsentcount) {
+  document.getElementById(divcaraccount).innerHTML = (document.getElementById('inputString').value.length);
   document.getElementById(divparcount).innerHTML = (document.getElementById('inputString').value.replace(/\n$/gm, '').split(/\n/).length);
   document.getElementById(divsentcount).innerHTML = (document.getElementById('inputString').value.split(/[.|!|?]+/g).length);
 }
