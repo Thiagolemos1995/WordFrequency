@@ -40,6 +40,10 @@ h1{
     cursor: pointer;
 }
 
+#translate:active{
+  background-color: #C0C0C255;
+}
+
 table {
     border-collapse: collapse;
     margin: 0.75rem 0;
