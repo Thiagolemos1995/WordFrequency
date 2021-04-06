@@ -117,7 +117,9 @@ function extracounts(divcaraccount, divparcount, divsentcount) {
 // função para adicionar um evento ao click do botão translate, para verificar se há algum texto escrito, caso positivo, realiza o processamento acima
 document.getElementById("translate").onclick = function(){
   var textvalue = document.getElementById("inputString").value
-     if(textvalue == ""){
+  var textlength = document.getElementById("inputString").value
+  window.console.log(textlength.length);
+     if(textvalue < 1){
         alert("Please enter the text that you want to count words!"); 
      }else{
         processData();
