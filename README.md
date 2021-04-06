@@ -15,4 +15,4 @@ Para futuras melhorias será alterado para um gráfico de bolhas (Bubble chart) 
 
 ## 
 
-[![Generic badge](https://img.shields.io/badge/<JSFiddle>-<WordFrequency>-<blue>.svg)](https://jsfiddle.net/thiagolemos1995/yts9L84b/6/)
+[![Generic badge](https://img.shields.io/badge/JSFiddle-WordFrequency-blue.svg)](https://jsfiddle.net/thiagolemos1995/yts9L84b/6/)
