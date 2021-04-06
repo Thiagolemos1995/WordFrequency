@@ -1,5 +1,5 @@
 # WordFrequency
-## Using HTML5, CSS3, Javascript, Jquery
+## Using HTML5, CSS3, Javascript
 
 Foi elaborado um contador de frequência de palavras utilizando html, css e javascript.
 
