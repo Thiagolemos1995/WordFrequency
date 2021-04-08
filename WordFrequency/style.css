@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: #C0C0C0;
+    background-color: #f7c881;
 }
 
 .content{
@@ -18,12 +18,22 @@ body{
 
 #textinput{
     flex: 1;
-    
+    width: 50vw;
+    background: white;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+#div-table{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
 h1{
-  border-bottom: 1.5px solid darkgrey;
+  color: white;
+  border-bottom: 1.5px solid white;
   padding-bottom: 6px;
+  text-align: center;
 }
 
 #inputString{
@@ -32,57 +42,57 @@ h1{
     height: 30vh;
     font-family: sans-serif, Arial, Helvetica;
 }
+
 #translate{
     font-family: sans-serif, Arial, Helvetica;
+    padding: 10px;
     border: 1px solid;
     border-radius: 7px;
     width: 100%;
     cursor: pointer;
+    background-color: orange;
 }
 
 #translate:active{
-  background-color: #C0C0C255;
+  background-color: rgb(177, 115, 0);
 }
 
 table {
     border-collapse: collapse;
     margin: 0.75rem 0;
   }
-  td {
-    word-break: break-all;
-    padding: 0.5rem;
-    border: 1px solid ;
-  }
-  tr:nth-child(even) {
-    background-color: #eee;
-  }
-  tr:hover {
-    background-color: darkgrey;
-  }
-  th {
-    border: 1px solid ;
-    padding: 0.5rem 0.5rem;
-    text-align: left;
-  }
-  td:nth-child(3) {
-    width: 100%;
-  }
+td {
+   word-break: break-all;
+   padding: 0.5rem;
+   border: 1px solid ;
+}
+tr:nth-child(even) {
+  background-color: #fcdfb5;
+}
+tr:hover {
+  transition: background-color 0.9s; -moz-transition: background-color 0.9s; -o-transition: background-color 0.9s; -ms-transition: background-color 0.9s; -webkit-transition: background-color 0.9s;
+  background-color: #f7af4b;
+}
+th {
+  border: 1px solid ;
+  padding: 0.5rem 0.5rem;
+  text-align: left;
+}
+td:nth-child(3) {
+  width: 100%;
+}
 
-  .pie-chart{
-    width: 15%;
-    height: 15%
-  }
+svg{
+  flex: 1;
+  width: 45vw;
+  margin: 0 auto;
+}
+#characters, #paragraphs, #sentences{
+  visibility: hidden;
+  border: 2px solid #f7af4b;
+  border-radius: 3px;
+  background-color: #f7af4b;
+  margin-top: 1rem;
+  padding: 15px;
+}
 
-  svg{
-    flex: 1;
-    width: 50vw;
-    margin: 0 auto;
-  }
-  #characters, #paragraphs, #sentences{
-    visibility: hidden;
-    border: 2px solid darkgrey;
-    border-radius: 3px;
-    background-color: darkgrey;
-    margin-top: 1rem;
-    padding: 15px;
-  }
