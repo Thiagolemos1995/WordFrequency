@@ -65,16 +65,20 @@ const processData = () => {
      const wordFrequency = sortByValue(wordFreq(cleanInput(getUserInput())));
      document.getElementById("div-table").innerHTML = "";
      addTable(tablediv, tableheader, wordFrequency);
-     var count = wordFreq(cleanInput(getUserInput()));
-     window.console.log(count);
+
+     // Mostra o conteudo da table dentro de vetores para DEBUG
+     const conteudoarray =sortByValue(wordFreq(cleanInput(getUserInput())));
+     conteudoarray.forEach(table=>{
+      console.log(table)
+      })
 };
 
  function pieChat(){
    var data = wordFreq(cleanInput(getUserInput()));
    var data = d3.entries(data);
 
-   var width = 360;
-   var height = 360;
+   var width = 270;
+   var height = 270;
    var radius = Math.min(width, height) / 2;
 
    var color = d3.scaleOrdinal(d3.schemeCategory20b);
